@@ -1,0 +1,28 @@
+mat-toolbar {
+  justify-content: space-between;
+
+  .auth {
+    display: flex;
+    gap: 20px;
+
+
+    &__text {
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      border: 1px solid #cecece;
+      border-radius: 4px;
+      padding: 0 10px;
+
+      .sighIn {
+        &:hover {
+            background-color: rgb(130, 136, 130);
+        }
+      }
+
+      .sighUp {
+        &:hover {}
+      }
+    }
+  }
+}

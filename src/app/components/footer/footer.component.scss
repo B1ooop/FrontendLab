@@ -1,0 +1,42 @@
+mat-toolbar {
+  position: relative;
+  display: block;
+  min-height: 400px;
+  height: fit-content;
+  align-items: start;
+  justify-content: center;
+
+  .sections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    margin: auto;
+    width: 80%;
+
+    .section {
+      &__center {
+        padding: 24px 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: fit-content;
+      }
+    }
+
+    .link {
+      cursor: pointer;
+      text-decoration: underline;
+      font-size: 12px;
+      font-weight: 400;
+      width: fit-content;
+    }
+  }
+
+  .watermark {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(146, 146, 146);
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+  }
+}
