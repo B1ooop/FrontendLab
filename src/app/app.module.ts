@@ -6,7 +6,6 @@ import { SharedModule } from './modules/shared/shared.module';
 import { RoutingModule } from './modules/routing/routing.module';
 import { ShopComponent } from './components/shop/shop.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -14,7 +13,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     RoutingModule,
     SharedModule,
   ],
-  declarations: [AppComponent, ShopComponent, PageNotFoundComponent],
+  declarations: [AppComponent, ShopComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
