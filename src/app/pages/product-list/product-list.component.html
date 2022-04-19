@@ -1,1 +1,27 @@
-product list
+<main class="container">
+    <div class="filters">
+      <div>filter1</div>
+      <div>filter1</div>
+      <div>filter1</div>
+      <div>filter1</div>
+      <div>filter1</div>
+      <div>filter1</div>
+      <div>filter1</div>
+      <div>filter1</div>
+      <div>filter1</div>
+      <div>filter1</div>
+      <div>filter1</div>
+      <div>filter1</div>
+      <div>filter1</div>
+    </div>
+    <div class="list">
+      <mat-card *ngFor="let item of quant">
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p class="description">product description Lorem ipsum dolor sit amet.</p>
+          <p class="price"><span class="numbers">12456</span> $</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </main>
+  

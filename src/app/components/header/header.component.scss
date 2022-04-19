@@ -1,6 +1,12 @@
 mat-toolbar {
   justify-content: space-between;
 
+  .shop-name {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   .auth {
     display: flex;
     gap: 20px;
@@ -10,19 +16,8 @@ mat-toolbar {
       cursor: pointer;
       font-size: 14px;
       font-weight: 400;
-      border: 1px solid #cecece;
       border-radius: 4px;
       padding: 0 10px;
-
-      .sighIn {
-        &:hover {
-            background-color: rgb(130, 136, 130);
-        }
-      }
-
-      .sighUp {
-        &:hover {}
-      }
     }
   }
 }

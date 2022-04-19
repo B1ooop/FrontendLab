@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ShopHomepageComponent } from './shop-homepage.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/modules/shared/shared.module';
+import { MatCardModule } from '@angular/material/card';
 
 
 

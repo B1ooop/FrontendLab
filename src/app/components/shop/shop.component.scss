@@ -2,4 +2,10 @@ app-header {
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 99;
+}
+
+.content-wrapper {
+  width: 80%;
+  margin: auto;
 }

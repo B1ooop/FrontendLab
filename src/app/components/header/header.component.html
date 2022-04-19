@@ -1,14 +1,12 @@
 <header #header>
   <mat-toolbar>
-    <section class="shop-name">
+    <section class="shop-name" (click)="navigateToHome()">
       <span>Shop Name</span>
     </section>
 
     <section class="auth">
-      <button class="auth__text sighIn" mat-stroked-button>Sigh in</button>
-      <button class="auth__text sighUp" mat-stroked-button color="accent">Sigh up</button>
-      
-      
+      <button class="auth__text" mat-stroked-button>Sigh in</button>
+      <button class="auth__text" mat-stroked-button color="accent">Sigh up</button>
     </section>
   </mat-toolbar>
 </header>
