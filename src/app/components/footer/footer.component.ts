@@ -7,8 +7,8 @@ import * as moment from 'moment';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  @ViewChild('footer') footer: ElementRef;
-  @Output() footerHeight = new EventEmitter();
+  @ViewChild('footer') footer!: ElementRef;
+  @Output() footerHeight: EventEmitter<number> = new EventEmitter();
 
   public currentYear = moment().year();
 

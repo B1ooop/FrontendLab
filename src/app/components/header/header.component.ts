@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, Output, ViewChild, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -7,15 +8,21 @@ import { AfterViewInit, Component, ElementRef, OnInit, Output, ViewChild, EventE
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
-  @ViewChild('header') header: ElementRef;
-  @Output() headerHeight = new EventEmitter();
+  @ViewChild('header') header!: ElementRef;
+  @Output() headerHeight: EventEmitter<number> = new EventEmitter();
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
   }
 
   ngAfterViewInit(): void {
     this.headerHeight.emit(this.header.nativeElement.offsetHeight);
+  }
+
+  navigateToHome() {
+    this.router.navigate(['/shop']);
   }
 }

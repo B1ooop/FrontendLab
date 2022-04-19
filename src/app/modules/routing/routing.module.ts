@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent } from 'src/app/components/page-not-found/page-not-found.component';
 import { ShopComponent } from 'src/app/components/shop/shop.component';
 
 const routes: Routes = [
@@ -28,9 +29,12 @@ const routes: Routes = [
         loadChildren: () => import('../../pages/product/product.module').then(m => m.ProductModule),
         pathMatch: 'full',
       },
-
     ]
-  }
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+  },
 ];
 
 @NgModule({

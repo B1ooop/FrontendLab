@@ -6,14 +6,14 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/co
   styleUrls: ['./shop.component.scss']
 })
 export class ShopComponent implements OnInit {
-  private headerMargin: ElementRef;
+  private headerMargin!: ElementRef;
   @ViewChild('headerMargin') set headerMarginContent(headerMarginContent: ElementRef) {
     if (headerMarginContent) { this.headerMargin = headerMarginContent; }
   }
-  @ViewChild('contentWrapper') contentWrapper: ElementRef;
+  @ViewChild('contentWrapper') contentWrapper!: ElementRef;
 
-  private headerHeight: number = null;
-  private footerHeight: number = null;
+  private headerHeight: number | null = null;
+  private footerHeight: number | null = null;
 
 
   constructor(
@@ -23,11 +23,11 @@ export class ShopComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  setHeaderHeight(height) {
+  setHeaderHeight(height: number) {
     this.headerHeight = height;
     this.tryToSetContentHeight();
   }
-  setFooterHeight(height) {
+  setFooterHeight(height: number) {
     this.footerHeight = height;
     this.tryToSetContentHeight();
   }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-shop-homepage',
@@ -7,11 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopHomepageComponent implements OnInit {
 
-  public quant = Array.from(Array(100));
 
-  constructor() { }
+
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  navigateToProductList() {
+    this.router.navigate(['product-list'], { relativeTo: this.route });
   }
 
 }
