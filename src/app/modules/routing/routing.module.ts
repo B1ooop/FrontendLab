@@ -31,6 +31,14 @@ const routes: Routes = [
     ]
   },
   {
+    path: 'login',
+    loadChildren: () => import('../../pages/page-login/page-login.module').then(m => m.PageLoginModule),
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('../../pages/page-register/page-register.module').then(m => m.PageRegisterModule),
+  },
+  {
     path: '**',
     loadChildren: () => import('../../pages/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule),
   },

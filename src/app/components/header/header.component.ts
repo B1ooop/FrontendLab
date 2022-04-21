@@ -25,4 +25,8 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   navigateToHome() {
     this.router.navigate(['/shop']);
   }
+
+  navigateToLoginPage() {
+    this.router.navigate(['/login']);
+  }
 }
