@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="login-form">
+      <div class="login-form__title">Sign in to 'Shop Name'</div>
+      <div class="login-form__section p-24">
+        <form [formGroup]="loginForm" class="form">
+          <mat-form-field appearance="outline">
+            <mat-label>Email address</mat-label>
+            <input 
+              matInput
+              formControlName="email"
+              placeholder="Email address"
+            >
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input 
+              matInput
+              formControlName="password"
+              placeholder="Password"
+            >
+            <mat-hint class="link">Forgot password?</mat-hint>
+          </mat-form-field>
+  
+          <button mat-raised-button color="accent" type="button" (click)="signIn()">Sign in</button>
+        </form>
+      </div>
+      <div class="login-form__section p-12">
+        <div class="register-invitation">
+          <div class="text">New to 'Shop Name'? <span class="link">Create an account</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

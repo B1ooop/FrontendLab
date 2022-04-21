@@ -1,0 +1,81 @@
+@mixin link {
+    cursor: pointer;
+    color: #448eed;
+  }
+  
+  .container {
+    .login-form {
+      width: 400px;
+      margin: auto;
+      margin-top: 48px;
+  
+      &__title {
+        font-size: 18px;
+        text-align: center;
+      }
+  
+      &__section {
+        margin-top: 24px;
+        border: 1px solid #c2ced7;
+        border-radius: 5px;
+        background: #f6f8fa;
+  
+        ::ng-deep.mat-form-field-label,
+        ::ng-deep.mat-hint {
+          color: rgb(0 0 0 / 70%);
+        }
+  
+        ::ng-deep.mat-form-field-subscript-wrapper {
+          font-size: 85%;
+        }
+  
+        ::ng-deep.mat-hint {
+          &.link {
+            @include link;
+          }
+        }
+  
+        ::ng-deep.mat-form-field-appearance-outline .mat-form-field-subscript-wrapper {
+          padding-left: 0.4em;
+        }
+  
+        ::ng-deep.mat-form-field-appearance-outline .mat-form-field-outline {
+          color: #c2ced7;
+        }
+  
+        .form {
+          display: flex;
+          flex-direction: column;
+          gap: 24px 0;
+        }
+  
+        .register-invitation {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  
+    .link {
+      @include link;
+    }
+  }
+  
+  .p- {
+    &6 {
+      padding: 6px;
+    }
+  
+    &12 {
+      padding: 12px;
+    }
+  
+    &24 {
+      padding: 24px;
+    }
+  
+    &48 {
+      padding: 48px;
+    }
+  }
+  
